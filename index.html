@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="home_page_style.css">
+</head>
+<body>
+<div class="main">
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="Images/indian_army_ad.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="navbar">
+    <div class="icon">
+      <img src="Images/indian_army_emblem.jpg" width="200" height="150">
+    </div>
+    <div class="menu">
+      <nav role="navigation" class="primary-navigation">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about_page.html">ABOUT</a></li>
+          <li><a href="history_page.html">HISTORY</a></li>
+          <li><a href="organisation_page.html">ORGANISATION>></a>
+            <ul class="dropdown">
+              <li><a href="organisation_page.html">COMMAND STRUCTURE</a></li>
+              <li><a href="organisation_page.html">COMBAT ARMS</a></li>
+              <li><a href="organisation_page.html">SERVICES</a></li>
+            </ul>
+          </li>
+          <li><a href="personnel_page.html">PERSONNEL>></a>
+            <ul class="dropdown">
+              <li><a href="personnel_page.html">RANK STRUCTURE</a></li>
+              <li><a href="personnel_page.html">MEDALS AND AWARDS</a></li>
+              <li><a href="personnel_page.html">UNIFORMS</a></li>
+            </ul>
+          </li>
+          <li><a href="inventory_page.html">INVENTORY</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <header>
+      <h1>WELCOME TO OUR TRIBUTE TO THE INDIAN ARMY!</h1>
+    </header>
+    <section>
+      <p class="typing-effect">Join us as we celebrate the valor, sacrifice, and unwavering dedication of the Indian Army.<br>From the icy peaks to the scorching deserts, our soldiers stand guard with unwavering might.<br>This page is a salute to their courage and a heartfelt expression of gratitude. <strong> <span class="tricolor">Jai Hind!</span></strong></p>
+    </section>
+  </div>
+</div>
+<footer>
+  <p>Note: This is a fan page and by no means represents the Indian Army. For official information, please visit <a href="https://indianarmy.nic.in/" target="_blank">indianarmy.nic.in</a>.</p>
+</footer>
+<script>
+  window.onload = function() {
+    document.querySelector('.typing-effect').classList.add('typing');
+  };
+</script>
+</body>
+</html>

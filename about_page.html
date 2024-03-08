@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About</title>
+  <link rel="stylesheet" href="about_page_style.css">
+</head>
+<body>
+<section class="main">
+  <div class="navbar">
+    <div class="icon">
+      <img src="Images/indian_army_emblem.jpg" width="200" height="150">
+    </div>
+    <div class="menu">
+      <nav role="navigation" class="primary-navigation">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about_page.html">ABOUT</a></li>
+          <li><a href="history_page.html">HISTORY</a></li>
+          <li><a href="organisation_page.html">ORGANISATION>></a>
+            <ul class="dropdown">
+              <li><a href="organisation_page.html">COMMAND STRUCTURE</a></li>
+              <li><a href="organisation_page.html">COMBAT ARMS</a></li>
+              <li><a href="organisation_page.html">SERVICES</a></li>
+            </ul>
+          </li>
+          <li><a href="personnel_page.html">PERSONNEL>></a>
+            <ul class="dropdown">
+              <li><a href="personnel_page.html">RANK STRUCTURE</a></li>
+              <li><a href="personnel_page.html">MEDALS AND AWARDS</a></li>
+              <li><a href="personnel_page.html">UNIFORMS</a></li>
+            </ul>
+          </li>
+          <li><a href="inventory_page.html">INVENTORY</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <header>
+    <h1>About Me:</h1>
+    <p>Welcome to the Website! My name is Arnav, and I am the creator of this website. Inspired by my father, who serves as a Colonel in the Indian Army, I felt compelled to honor the valor, dedication, and unwavering commitment of the Indian Army through this platform.</p>
+    </header>
+      <div class="read-more-content">
+      <h2>My Inspiration:</h2>
+      <p>Growing up with a father who embodies the values of courage, integrity, and patriotism, I have always been deeply inspired by his service to the nation. His unwavering commitment to duty has instilled in me a profound admiration for the Indian Army and its soldiers.</p>
+
+      <h2>My Mission:</h2>
+      <p>My mission in creating this website is to pay tribute to the brave men and women of the Indian Army who selflessly serve our nation. Through stories, photographs, and heartfelt messages, I aim to showcase the extraordinary courage and dedication of our soldiers and express my gratitude for their unwavering service.</p>
+
+      <h2>My Vision:</h2>
+      <p>My vision is to create a space where the indomitable spirit of the Indian Army shines brightly. By sharing the stories of our soldiers and highlighting their remarkable achievements, I hope to inspire a sense of unity, pride, and appreciation among our fellow citizens. Together, let us salute the heroes who defend our nation with unmatched courage and dedication.</p>
+
+      <h2>Join Me:</h2>
+      <p>Join me in my mission to honor and celebrate the Indian Army. Whether you have a personal connection to the military or simply admire the courage of our soldiers, there are many ways to get involved. Share your stories, contribute to our tribute, or simply spread the word about the incredible work of the Indian Army. Together, let us stand in solidarity with those who protect our nation's sovereignty and uphold its values.</p>
+    </div>
+    <button class="read-more-button" onclick="toggleReadMore()">Read More</button>
+  </div>
+  </section>
+<script>
+  function toggleReadMore() {
+    var content = document.querySelector('.read-more-content');
+    var button = document.querySelector('.read-more-button');
+    var body = document.querySelector('body');
+
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      button.textContent = "Read Less";
+      body.style.backgroundColor = "#000000"; // Change background color to black
+    } else {
+      content.style.display = "none";
+      button.textContent = "Read More";
+      body.style.backgroundColor = "initial"; // Reset background color to initial
+    }
+  }
+</script>
+</body>
+</html>

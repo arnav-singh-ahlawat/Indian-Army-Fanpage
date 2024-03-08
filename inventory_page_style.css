@@ -1,0 +1,801 @@
+html{
+  height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  background: #000000;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 30vh;
+  flex: 1;
+}
+
+.navbar{
+  width: 1200px;
+  height: 75px;
+  margin: auto;
+}
+
+.icon{
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+
+.menu{
+  width: 400px;
+  float: left;
+  height: 70px;
+}
+
+ul{
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li{
+  list-style: none;
+  margin-left: 62px;
+  margin-top: 27px;
+  font-size: 14px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  font-family: Arial;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+
+ul li a:hover{
+  text-decoration: underline;
+  color: #D3D3D3;
+}
+
+nav {
+  &.primary-navigation {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+
+    ul li {
+      list-style: none;
+      margin: 0 auto;
+      border-left: 2px solid #FF0000;
+      padding: 0 30px;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      font-family: arvo;
+    }
+
+    li a {
+      color: #FFD700;
+    }
+
+    li a:hover {
+      color: #fff;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+
+    ul li ul {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      padding-left: 0;
+      left: 0;
+      display: none;
+      background: #000000;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    ul li:hover > ul,
+    ul li ul:hover {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      min-width: 250px;
+      text-align: left;
+      padding-top: 20px;
+      box-shadow: 0px 3px 5px -1px #000000
+    }
+
+    ul li ul li {
+      clear: both;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+      border-style: none;
+    }
+
+    ul li ul li a:hover {
+      padding-left: 10px;
+      border-left: 2px solid #FF0000;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: #fff
+  }
+}
+
+ul li ul li a {
+  transition: all 0.5s ease;
+}
+
+
+body{
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "ROG Fonts";
+  line-height: 1.5;
+  height: 100%;
+  perspective: 1px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+
+}
+body p{
+  font-family: monospace;
+}
+
+.section1{
+  margin-top: 100px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  transform-style: inherit;
+}
+.section1 h1{
+  font-weight: normal;
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section1:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/handgun.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+
+.section2{
+  padding: 10vh;
+  background-color: #000;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.section3{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section3 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section3:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/shotgun.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section4{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section5{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section5 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section5:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/submachine_gun.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section6{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section7{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section7 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section7:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/assault_rifle.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section8{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section9{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section9 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section9:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/sniper_rifle.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section10{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section11{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section11 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section11:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/machine_gun.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section12{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section13{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section13 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section13:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/explosive.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section14{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section15{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section15 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section15:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/armoured_vehicle.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section16{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section17{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section17 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section17:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/artillery.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section18{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section19{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section19 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+.section19:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/air_defence_system.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+.section20{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section21{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section21 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+
+.section21:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/missile.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+
+.section22{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section23{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 10vh 10vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-style: inherit;
+}
+
+.section23 h1{
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000000;
+}
+
+.section23:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url('Images/helicopter.jpg');
+  filter: brightness(0.5);
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+
+  transform: translateZ(-1px) scale(2);
+}
+
+.section24{
+  padding: 10vh;
+  background-color: #000;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: monospace;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.myBtn {
+  display: inline-block;
+  position: fixed;
+  padding: 10px 20px;
+  left: 48%;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 18px;
+  border-radius: 25px;
+}
+
+.myBtn:hover {
+  background-color: #0056b3;
+}
